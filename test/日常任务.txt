@@ -1,0 +1,77 @@
+1 停止计划任务
+2 锁表  flush tables with read lock        
+3 记录点  show master status;
+4 在备库上开启screen
+5
+
+然后unlock tables;解除锁定。
+
+
+GRANT REPLICATION SLAVE ON *.* to 'slaveuser'@'10.0.0.37' identified by 'hb87352121';    #前次已执行
+
+CHANGE MASTER TO MASTER_HOST='10.0.0.146', MASTER_USER='slaveuser', MASTER_PASSWORD='hb87352121', MASTER_CONNECT_RETRY=10, MASTER_LOG_FILE='bin.015019', MASTER_LOG_POS=452;
+
+
+
+
+
+2
+
+mysql> show master status;
++------------+----------+--------------+------------------+
+| File       | Position | Binlog_Do_DB | Binlog_Ignore_DB |
++------------+----------+--------------+------------------+
+| bin.015019 |      452 |              |                  |
+
+
+
+
+
+
+
+mh------------
+
+mysql> show master status;
++------------+-----------+-------------------------------------------------------------+------------------+
+| File       | Position  | Binlog_Do_DB                                                | Binlog_Ignore_DB |
++------------+-----------+-------------------------------------------------------------+------------------+
+| bin.015530 | 158226847 | mangahere,onlinemanga,animehere,manga_zone_app,mangahere_es | mysql            |
+
+
+
+
+
+
+GRANT REPLICATION SLAVE ON *.* TO 'dbbackup'@'10.0.0.%' IDENTIFIED BY 'hb87352121';
+
+
+
+ CHANGE MASTER TO MASTER_HOST='10.0.0.42', MASTER_USER='dbbackup', MASTER_PASSWORD='hb87352121', MASTER_CONNECT_RETRY=10, MASTER_LOG_FILE='bin.015530', MASTER_LOG_POS=158226847;
+
+ CHANGE MASTER TO MASTER_HOST='10.0.0.215', MASTER_USER='dbbackup', MASTER_PASSWORD='slave87352121', MASTER_CONNECT_RETRY=10, MASTER_LOG_FILE='mysql-bin.003436', MASTER_LOG_POS=426574229;
+
+
+
+ CHANGE MASTER TO MASTER_HOST='192.168.231.115', MASTER_USER='slaveuser', MASTER_PASSWORD='slave87352121', MASTER_CONNECT_RETRY=10, MASTER_LOG_FILE='bin.000079', MASTER_LOG_POS=710120715;
+
+*************************** 1. row ***************************
+               Slave_IO_State: Waiting for master to send event
+                  Master_Host: 192.168.231.115
+                  Master_User: slaveuser
+                  Master_Port: 3306
+                Connect_Retry: 60
+              Master_Log_File: bin.000079
+          Read_Master_Log_Pos: 710120715
+               Relay_Log_File: replicate.000144
+                Relay_Log_Pos: 580827695
+        Relay_Master_Log_File: bin.000078
+             Slave_IO_Running: Yes
+            Slave_SQL_Running: No
+              Replicate_Do_DB: 
+          Replicate_Ignore_DB: mysql
+           Replicate_Do_Table: 
+       Replicate_Ignore_Table: 
+      Replicate_Wild_Do_Table: reporting.%
+  Replicate_Wild_Ignore_Table: 
+                   Last_Errno: 1032
+                   Last_Error: Could n

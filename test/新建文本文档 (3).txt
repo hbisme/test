@@ -1,0 +1,87 @@
+[root@lwnl-mf-vb01 yum.repos.d]# yum update php-fpm --enablerepo=remi 
+Loaded plugins: fastestmirror, priorities
+Loading mirror speeds from cached hostfile
+ * base: mirror.1000mbps.com
+ * extras: mirror.prolocation.net
+ * remi: remi.check-update.co.uk
+ * updates: mirrors.supportex.net
+Setting up Update Process
+Resolving Dependencies
+--> Running transaction check
+---> Package php-fpm.x86_64 0:5.3.13-1.el6.remi will be updated
+---> Package php-fpm.x86_64 0:5.4.41-1.el6.remi will be an update
+--> Processing Dependency: php-common(x86-64) = 5.4.41-1.el6.remi for package: php-fpm-5.4.41-1.el6.remi.x86_64
+--> Running transaction check
+---> Package php-common.x86_64 0:5.3.13-1.el6.remi will be updated
+--> Processing Dependency: php(api) = 20090626-x86-64 for package: php-pecl-memcache-3.0.6-2.el6.remi.x86_64
+--> Processing Dependency: php(api) = 20090626 for package: php-pecl-imagick-3.0.1-1.el6.remi.1.x86_64
+--> Processing Dependency: php(api) = 20090626-x86-64 for package: php-pecl-apc-3.1.10-1.el6.remi.x86_64
+--> Processing Dependency: php(zend-abi) = 20090626-x86-64 for package: php-pecl-memcache-3.0.6-2.el6.remi.x86_64
+--> Processing Dependency: php(zend-abi) = 20090626 for package: php-pecl-imagick-3.0.1-1.el6.remi.1.x86_64
+--> Processing Dependency: php(zend-abi) = 20090626-x86-64 for package: php-pecl-apc-3.1.10-1.el6.remi.x86_64
+--> Processing Dependency: php(api) = 20090626-x86-64 for package: php-pecl-memcache-3.0.6-2.el6.remi.x86_64
+--> Processing Dependency: php(api) = 20090626 for package: php-pecl-imagick-3.0.1-1.el6.remi.1.x86_64
+--> Processing Dependency: php(api) = 20090626-x86-64 for package: php-pecl-apc-3.1.10-1.el6.remi.x86_64
+--> Processing Dependency: php(zend-abi) = 20090626-x86-64 for package: php-pecl-memcache-3.0.6-2.el6.remi.x86_64
+--> Processing Dependency: php(zend-abi) = 20090626 for package: php-pecl-imagick-3.0.1-1.el6.remi.1.x86_64
+--> Processing Dependency: php(zend-abi) = 20090626-x86-64 for package: php-pecl-apc-3.1.10-1.el6.remi.x86_64
+--> Processing Dependency: php-common(x86-64) = 5.3.13-1.el6.remi for package: php-5.3.13-1.el6.remi.x86_64
+--> Processing Dependency: php-common(x86-64) = 5.3.13-1.el6.remi for package: php-gd-5.3.13-1.el6.remi.x86_64
+--> Processing Dependency: php-common(x86-64) = 5.3.13-1.el6.remi for package: php-pdo-5.3.13-1.el6.remi.x86_64
+--> Processing Dependency: php-common(x86-64) = 5.3.13-1.el6.remi for package: php-cli-5.3.13-1.el6.remi.x86_64
+--> Processing Dependency: php-common(x86-64) = 5.3.13-1.el6.remi for package: php-mbstring-5.3.13-1.el6.remi.x86_64
+---> Package php-common.x86_64 0:5.4.41-1.el6.remi will be an update
+--> Running transaction check
+---> Package php.x86_64 0:5.3.13-1.el6.remi will be updated
+--> Processing Dependency: php(x86-64) = 5.3.13-1.el6.remi for package: php-devel-5.3.13-1.el6.remi.x86_64
+---> Package php.x86_64 0:5.4.41-1.el6.remi will be an update
+---> Package php-cli.x86_64 0:5.3.13-1.el6.remi will be updated
+---> Package php-cli.x86_64 0:5.4.41-1.el6.remi will be an update
+---> Package php-gd.x86_64 0:5.3.13-1.el6.remi will be updated
+---> Package php-gd.x86_64 0:5.4.41-1.el6.remi will be an update
+--> Processing Dependency: libjpeg.so.62(LIBJPEG_6.2)(64bit) for package: php-gd-5.4.41-1.el6.remi.x86_64
+---> Package php-mbstring.x86_64 0:5.3.13-1.el6.remi will be updated
+---> Package php-mbstring.x86_64 0:5.4.41-1.el6.remi will be an update
+---> Package php-pdo.x86_64 0:5.3.13-1.el6.remi will be updated
+--> Processing Dependency: php-pdo(x86-64) = 5.3.13-1.el6.remi for package: php-mysql-5.3.13-1.el6.remi.x86_64
+---> Package php-pdo.x86_64 0:5.4.41-1.el6.remi will be an update
+---> Package php-pecl-apc.x86_64 0:3.1.10-1.el6.remi will be updated
+---> Package php-pecl-apc.x86_64 0:3.1.15-0.4.20130912.el6.remi.5.4 will be an update
+---> Package php-pecl-imagick.x86_64 0:3.0.1-1.el6.remi.1 will be updated
+---> Package php-pecl-imagick.x86_64 0:3.1.2-4.el6.remi.5.4 will be an update
+--> Processing Dependency: ImageMagick-last-libs(x86-64) >= 6.8.9 for package: php-pecl-imagick-3.1.2-4.el6.remi.5.4.x86_64
+--> Processing Dependency: libMagickWand-6.Q16.so.2()(64bit) for package: php-pecl-imagick-3.1.2-4.el6.remi.5.4.x86_64
+--> Processing Dependency: libMagickCore-6.Q16.so.2()(64bit) for package: php-pecl-imagick-3.1.2-4.el6.remi.5.4.x86_64
+---> Package php-pecl-memcache.x86_64 0:3.0.6-2.el6.remi will be updated
+---> Package php-pecl-memcache.x86_64 0:3.0.8-2.el6.remi.5.4 will be an update
+--> Running transaction check
+---> Package ImageMagick-last-libs.x86_64 0:6.9.1.2-1.el6.remi.1 will be obsoleting
+--> Processing Dependency: liblcms2.so.2()(64bit) for package: ImageMagick-last-libs-6.9.1.2-1.el6.remi.1.x86_64
+--> Processing Dependency: libfftw3.so.3()(64bit) for package: ImageMagick-last-libs-6.9.1.2-1.el6.remi.1.x86_64
+--> Processing Dependency: libIlmImf.so.6()(64bit) for package: ImageMagick-last-libs-6.9.1.2-1.el6.remi.1.x86_64
+---> Package ImageMagick2.x86_64 0:6.6.5.10-1.el6.remi will be obsoleted
+---> Package libjpeg.x86_64 0:6b-46.el6 will be obsoleted
+---> Package libjpeg-turbo.x86_64 0:1.2.1-3.el6_5 will be obsoleting
+---> Package php-devel.x86_64 0:5.3.13-1.el6.remi will be updated
+---> Package php-devel.x86_64 0:5.4.41-1.el6.remi will be an update
+---> Package php-mysql.x86_64 0:5.3.13-1.el6.remi will be updated
+---> Package php-mysql.x86_64 0:5.4.41-1.el6.remi will be an update
+--> Running transaction check
+---> Package ImageMagick-last-libs.x86_64 0:6.9.1.2-1.el6.remi.1 will be obsoleting
+--> Processing Dependency: liblcms2.so.2()(64bit) for package: ImageMagick-last-libs-6.9.1.2-1.el6.remi.1.x86_64
+---> Package OpenEXR-libs.x86_64 0:1.6.1-8.1.el6 will be installed
+---> Package fftw.x86_64 0:3.2.1-3.1.el6 will be installed
+--> Finished Dependency Resolution
+Error: Package: ImageMagick-last-libs-6.9.1.2-1.el6.remi.1.x86_64 (remi)
+           Requires: liblcms2.so.2()(64bit)
+ You could try using --skip-broken to work around the problem
+ You could try running: rpm -Va --nofiles --nodigest
+[root@lwnl-mf-vb01 yum.repos.d]# yum install liblcms2 --enablerepo=epel     
+Loaded plugins: fastestmirror, priorities
+Loading mirror speeds from cached hostfile
+ * base: mirrors.supportex.net
+ * extras: mirror.prolocation.net
+ * updates: mirrors.supportex.net
+Setting up Install Process
+No package liblcms2 available.
+Error: Nothing to do
